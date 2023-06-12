@@ -1,0 +1,26 @@
+version: "3"  
+services:
+  vaultwarden:
+    image: vaultwarden/server:latest
+    container_name: ${CONTAINER_NAME}
+    restart: always
+    networks:  
+      - 1panel-network
+    volumes:
+      - ./data:/data
+    ports:
+      - ${HOST_IP}:${PANEL_APP_PORT_HTTP}:80
+      - ${HOST_IP}:${PANEL_APP_PORT_API}:3012
+    environment:
+      - DOMAIN=${VAULTWARDEN_EXTERNAL_URL}
+      - ADMIN_TOKEN=${ADMIN_TOKEN}
+      - WEB_VAULT_ENABLED=${WEB_VAULT_ENABLED}
+      - WEBSOCKET_ENABLED=${WEBSOCKET_ENABLED}
+      - SIGNUPS_ALLOWED=${SIGNUPS_ALLOWED}
+      - INVITATIONS_ALLOWED=${INVITATIONS_ALLOWED}
+    labels:  
+      createdBy: "Apps"
+
+networks:  
+  1panel-network:  
+    external: true

@@ -1,0 +1,20 @@
+name: VaultWarden
+tags:
+  - 工具
+title: 用 Rust 编写的 Bitwarden 服务器
+type: 工具
+description: 用 Rust 编写的 Bitwarden 服务器
+additionalProperties:
+  key: vaultwarden
+  name: VaultWarden
+  tags:
+    - Tool
+  shortDescZh: 用 Rust 编写的 Bitwarden 服务器，兼容 Bitwarden 官方客户端。
+  shortDescEn: Alternative implementation of the Bitwarden server   API   written in Rust and compatible with upstream Bitwarden   clients*.
+  type: tool
+  crossVersionUpdate: true
+  limit: 0
+  recommend: 0
+  website: https://github.com/dani-garcia/vaultwarden
+  github: https://github.com/dani-garcia/vaultwarden
+  document: https://github.com/dani-garcia/vaultwarden/wiki

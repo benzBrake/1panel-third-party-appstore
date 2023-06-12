@@ -1,0 +1,67 @@
+additionalProperties:
+  formFields:
+    - default: 3080
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: Web UI Port
+      labelZh: 网页端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: 3012
+      edit: true
+      envKey: PANEL_APP_PORT_API
+      labelEn: Web API Port
+      labelZh: API端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: "http://localhost:3080"
+      edit: true
+      envKey: VAULTWARDEN_EXTERNAL_URL
+      labelEn: External URL
+      labelZh: 外部访问地址
+      required: true
+      rule: paramExtUrl
+      type: text
+    - default: "vw"
+      edit: true
+      envKey: ADMIN_TOKEN
+      labelEn: Administrator token
+      labelZh: 管理员密码
+      required: true
+      random: true
+      rule: paramComplexity
+      type: password
+    - default: "true"
+      edit: true
+      envKey: WEB_VAULT_ENABLED
+      labelEn: Enable web vault(true/false)
+      labelZh: 开启网页登录(true/false)
+      required: true
+      rule: paramCommon
+      type: text
+    - default: "false"
+      edit: true
+      envKey: WEBSOCKET_ENABLED
+      labelEn: Enable WebSocket notifications(true/false)
+      labelZh: 启用 WebSocket 通知(true/false)
+      required: true
+      rule: paramCommon
+      type: text
+    - default: "false"
+      edit: true
+      envKey: SIGNUPS_ALLOWED
+      labelEn: Allow registration of new users(true/false)
+      labelZh: 允许注册新用户(true/false)
+      required: true
+      rule: paramCommon
+      type: text
+    - default:"true"
+      edit: true
+      envKey: INVITATIONS_ALLOWED
+      labelEn: Allow invitations registration(true/false)
+      labelZh: 允许邀请注册(true/false)
+      required: true
+      rule: paramCommon
+      type: text
