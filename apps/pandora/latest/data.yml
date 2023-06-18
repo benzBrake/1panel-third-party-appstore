@@ -1,0 +1,31 @@
+additionalProperties:
+  formFields:
+    - default: 8008
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: Web UI Port
+      labelZh: 网页端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: ""
+      edit: true
+      envKey: OPENAI_EMAIL
+      labelEn: OpenAI email account
+      labelZh: OpenAI 邮箱
+      required: true
+      type: text
+    - default: ""
+      edit: true
+      envKey: OPENAI_PASSWORD
+      labelEn: OpenAI account password
+      labelZh: OpenAI 密码
+      required: true
+      type: text
+    - default: "NOT_SET"
+      edit: true
+      envKey: OPENAI_MFA_CODE
+      labelEn: OpenAI MFA code
+      labelZh: OpenAI MFA 代码
+      required: true
+      type: text

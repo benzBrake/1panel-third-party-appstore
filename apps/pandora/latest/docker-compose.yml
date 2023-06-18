@@ -1,0 +1,23 @@
+version: "3"  
+services:
+  pandora:
+    image: pengzhile/pandora:latest
+    container_name: ${CONTAINER_NAME}
+    restart: always
+    networks:  
+      - 1panel-network
+    volumes:
+      - ./data:/data
+    ports:
+      - ${HOST_IP}:${PANEL_APP_PORT_HTTP}:8008
+    environment:
+      - PANDORA_SERVER=0.0.0.0:8008
+      - OPENAI_EMAIL=${OPENAI_EMAIL}
+      - OPENAI_PASSWORD=${OPENAI_PASSWORD}
+      - OPENAI_MFA_CODE=${OPENAI_MFA_CODE}
+    labels:  
+      createdBy: "Apps"
+
+networks:  
+  1panel-network:  
+    external: true
