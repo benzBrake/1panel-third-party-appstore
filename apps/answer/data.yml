@@ -1,0 +1,20 @@
+name: Answer
+tags:
+  - 工具
+title: Answer - 构建问答社区
+type: 工具
+description: 构建问答社区
+additionalProperties:
+  key: answer
+  name: Answer
+  tags:
+    - Tool
+  shortDescZh: 一款问答形式的知识社区开源软件，你可以使用它快速建立你的问答社区，用于产品技术支持、客户支持、用户交流等。
+  shortDescEn: An open-source knowledge-based community software. You can use it to quickly build your Q&A community for product technical support, customer support, user communication, and more..
+  type: tool
+  crossVersionUpdate: true
+  limit: 0
+  recommend: 0
+  website: https://answer.dev/
+  github: https://github.com/answerdev/answer
+  document: https://answer.dev/docs
